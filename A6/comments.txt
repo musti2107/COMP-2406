@@ -1,0 +1,5 @@
+Collaborations: Ahmed Abdelghani, Brittany Venoit, Malik Ehsan, Stanley Mbah, Adam Niazi
+Assistance and Inspiration: Annie Fry (TA), Henri (TA), Abe(TA)
+
+Problem faced: This assignment was relatively challenging specially the delete button which the ta helped. changing the user name was also a bit challenging. Link label logic took the longest time
+                                   

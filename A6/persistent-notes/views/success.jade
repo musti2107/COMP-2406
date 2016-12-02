@@ -1,0 +1,12 @@
+extends layout
+- var complete = #{done}
+block content
+  h1 Completion Message:
+  if done == true
+    h1 Success
+    p Everything done successfully!
+  else
+    h1 Failed
+    p Could not complete task.
+  a(href="/notes") Return
+  

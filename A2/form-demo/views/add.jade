@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+
+  p Name: #{item.name}
+  p City: #{item.city}
+  p Country: #{item.country}
+  p Birthday: #{item.birthday}
+  p Email: #{item.email}
+  
+  //Part3. Phone field represented on the add page
+  p Phone: #{item.phone}
+  
+  //Part2. Home (tag) link on add page to go back to the form screen
+  a(href="/") Home

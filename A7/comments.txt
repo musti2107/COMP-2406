@@ -1,0 +1,9 @@
+References: Used majority of google to search links to multiple AJAX, jQuery and JS syntax and API
+                            http://www.w3schools.com/
+
+Collaborators/assistance/inspiration: Annie Fry (TA), Abdulrahman Mufti, Stanley Mbah, Ehsan Malik, Adam Niazi, Abe(TA) and Henri (TA)
+
+Difficulties: I had no difficulty doing question 1 and 2 on my own with cross referencing 
+                           what was already done in the assignment previously and a link and label easy help form the TA. 
+                          What was really bothered me was question 3. Figuring out how to update the usernames on the pages 
+                          with the newusername was a challenge but with the help of the TA and my collaborators we achieved our goal.

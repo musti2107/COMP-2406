@@ -1,0 +1,8 @@
+referrences:
+
+http://www.google.com
+docs.mongodb.org
+
+collaborators:
+Malik Ehsanullah, Stanley Mbah
+assistance: (TAs) Annie fry, Abe, Henri

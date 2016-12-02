@@ -1,0 +1,76 @@
+extends layout
+
+block content
+  h1 #{username} Account
+  p Welcome #{username}
+
+  - if(error)
+    div.error #{error}
+
+  form(action="/logout", method="post")
+        button(type="submit") Logout
+  
+  h2 Notes
+  ul
+    - for (var z=0; z < userNotes.length; z++)
+      li
+        div
+          b= userNotes[z].title + ": "
+          - var c = userNotes[z].content
+
+          -var note_url = "/edit/" + userNotes[z]._id
+          a(href=note_url) [edit]
+          br
+          
+          -c = c.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/, '&quot;')          
+          -if (c.indexOf("[") > -1)
+            -for (var i = 0; i < c.length; i++)
+              -if (c[i] == "[")
+                -var open = i
+                -var close = c.indexOf(']',i)
+                -url = c.substring(open+1, close)
+                -array = url.split(" ")
+                -if (array.length > 2)
+                  -var label = array.splice(1).join(" ")
+                  a(href=array[0])=label
+                  -i = close
+                -else if (array.length == 2)
+                  a(href=array[0])= array[1]
+                  -i = close
+                -else
+                  a(href=array[0])= array[0]
+                  -i = close
+              -else if (c.indexOf('[', i) > -1)
+                -var open = c.indexOf('[', i)
+                -var close = c.indexOf(']', i)
+                -text = c.substring(i, open)
+                span!=text
+                -url = c.substring(open+1, close)
+                -array = url.split(" ")
+                -if (array.length > 2)
+                  -var label = array.splice(1).join(" ")
+                  a(href=array[0])=label
+                  -i = close
+                -else if (array.length == 2)
+                  a(href=array[0])= array[1]
+                  -i = close
+                -else
+                  a(href=array[0])= array[0]
+                  -i = close
+              -else
+                -text = c.substring(i, c.length)
+                span!=text
+                -break
+              -if (i >= c.length-1)
+                -break            
+                  
+          -else
+            span!=c
+     
+  form(action="/new", method="post")
+        button(type="submit") New Note
+        
+  //changeusername button
+  form(action="/changeusername", method="get")
+        button(type="submit") Change Username
+  

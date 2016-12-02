@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  div
+    form(action="/update", method="post")
+        input(type="hidden", name="id", value=note._id)
+        div
+            input#title(type="text", name="title", value=note.title)
+        div
+            textarea(cols="40", rows="5",
+                     name="content", wrap="virtual")=note.content
+        button(type="submit") Update
+        
+    //Q2. cancel button
+    form(action="/notes", method="get")
+        button(type="submit", id = "cancel") Cancel
+        
+    //delete button
+    form(action="/delete/"+note._id, method="get")
+        input(type="hidden", name="id", value=note._id)
+        button(type="submit", id="delete") Delete 

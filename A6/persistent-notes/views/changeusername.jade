@@ -1,0 +1,8 @@
+extends layout
+block content
+  h1= title
+  form(action="/changeusername", method="post")
+       div
+          input(type="text", name="username")
+       button(type="submit") Change Username
+  a(href="/notes") Return

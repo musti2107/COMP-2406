@@ -1,0 +1,31 @@
+extends layout
+  
+block content
+    h1= title
+
+    div
+      div
+      table
+        thead
+          th Name
+          th City
+          th Country
+          th Birthday
+          th Email
+          
+          //Part3. Phone field added to be represented on the list 
+          th Phone
+        tbody
+          each item in items
+            tr
+              td #{item.name}
+              td #{item.city}
+              td #{item.country}
+              td #{item.birthday}
+              td #{item.email}
+              
+              //Part3. Phone field added to be represented on the list
+              td #{item.phone}
+
+    form(method="get", action="/")
+      button(type="submit") Home

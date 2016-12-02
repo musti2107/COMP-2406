@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    h1= title
+
+    div
+      div
+      table
+        thead
+          th Name
+          th City
+          th Country
+          th Birthday
+          th Email
+          //Part3. Phone field added to be represented on the query result
+          th Phone          
+        tbody
+          each item in items
+            tr
+              td #{item.name}
+              td #{item.city}
+              td #{item.country}
+              td #{item.birthday}
+              td #{item.email}
+              //Part3. Phone field added to be represented on the query result
+              td #{item.phone}
+              
+    //added a home button to go back to the form page 
+    form(method="get", action="/")
+      button(type="submit") Home
+      
+      //added a button to back to the query page
+      button(type="button", onclick = "window.location.href='/query'") Query

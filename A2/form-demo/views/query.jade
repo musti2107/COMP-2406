@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+
+  div
+    p Fill in what you want to search for
+    form(method="post", action="/doquery")
+      div        
+        input#input(type="text", name="input")
+        label Input
+        
+      //This is the submit button that goes to the doquery page from query to show matching results  
+      button(type="submit") Submit         

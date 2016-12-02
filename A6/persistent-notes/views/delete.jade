@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Do you wish this note deleted? 
+  div
+    form(action="/delete/"+note._id, name="form_confirm", method="post")
+        input(type="hidden", name="id", value=note.id)
+        div
+            h3=note.title
+        div
+            p=note.content
+        button(type="submit") Delete

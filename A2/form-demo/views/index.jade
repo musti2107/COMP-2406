@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1= title
+
+  div
+    p Fill out your info
+    form(method="post", action="/add")
+      div        
+        input#name(type="text", name="name")
+        label Name         
+      div
+        input#country(type="text", name="city")
+        label City
+      div
+        input#country(type="text", name="country")
+        label Country
+      div
+        input#birthday(type="text", name="birthday")
+        label Birthday
+      div
+        input#email(type="text", name="email")
+        label Email
+      //Part3. Phone field added to the index page
+      div
+        input#phone(type="text", name="phone")
+        label Phone
+      button(type="submit") Submit
+      
+      //List button from TUT#3
+      button(type="button", onclick = "window.location.href='/list'") List
+      
+      //Query button to the querry page
+      button(type="button", onclick = "window.location.href='/query'") Query
